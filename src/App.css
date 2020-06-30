@@ -8,7 +8,7 @@
   height: 100px;
 }
 
-.navbar {
+.site-navbar {
   max-width: 2000px;
   width: 100%;
   margin: auto;
@@ -16,7 +16,7 @@
   justify-content: space-between;
 }
 
-.navbar-logo {
+.site-logo {
   width: 10%;
   height: 100px;
   display: flex;
@@ -36,7 +36,8 @@
 
 .navbar-logo-top {
   font-size: 64px;
-  top: 2px;
+  top: 5px;
+  line-height: 64px;
 }
 
 .navbar-logo-bottom {
@@ -46,9 +47,10 @@
 }
 
 .links-container {
-  width: 400px;
+  width: 600px;
   display: flex;
   align-items: center;
+  margin-right: 30px;
 }
 
 .navbar-link-container {
@@ -79,4 +81,67 @@
 
 .navbar-link:hover::after {
   width: 100%;
+}
+
+.responsive-links-container {
+  width: 100px;
+  display: none;
+  font-size: 33px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.fade .modal-dialog {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  margin: auto;
+  right: 0px;
+  transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+}
+
+.modal-content {
+  height: 100%;
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.burger-menu {
+  border: none;
+  background: rgb(255, 255, 255, 0.1);
+  position: fixed;
+  font-size: 24px;
+}
+
+.sidebar-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.sidebar-link {
+  padding: 10px;
+  border: none;
+  background: white;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 800px) {
+  .responsive-links-container {
+    display: flex;
+  }
+  .links-container {
+    display: none;
+  }
 }
