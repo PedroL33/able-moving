@@ -1,17 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import ResponsiveNav from './responsiveNav';
-import { useDispatch } from 'react-redux';
-import { showResNav, hideResNav } from '../actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { showResNav, hideResNav, setNav } from '../actions';
 
 function Navbar() {
 
   const dispatch = useDispatch();
+  const nav = useSelector(state => state.nav);
+  const [navLight, setNavLight] = useState(true)
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
-
+    window.addEventListener('scroll', handleScroll)
     return function() {
       window.removeEventListener('resize', handleResize())
+      window.removeEventListener('scroll', handleScroll())
     }
   })
 
@@ -21,26 +24,34 @@ function Navbar() {
     }
   }
 
+  function handleScroll() {
+    if(window.pageYOffset > window.innerHeight-50) {
+      setNavLight(false)
+    }else if(window.pageYOffset < window.innerHeight-50) {
+      setNavLight(true)
+    }
+  }
+
   return (
-    <div className="navbar-container">
+    <div className={navLight ? "navbar-container light" : "navbar-container"}>
       <div className="site-navbar">
         <div className="site-logo">
           <div className="navbar-logo-top">Able</div>
           <div className="navbar-logo-bottom">Moving Inc.</div>
         </div>
-        <div className="links-container">
+        <div className={navLight ? "links-container light" : "links-container"}>
           <div className="navbar-link-container">
-            <div className="navbar-link">
+            <div className={nav==="about" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("about"))}>
               ABOUT
             </div>
           </div>
           <div className="navbar-link-container">
-            <div className="navbar-link">
+            <div className={nav==="services" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("services"))}>
               SERVICES
             </div>
           </div>
           <div className="navbar-link-container">
-            <div className="navbar-link">
+            <div className={nav==="contact" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("contact"))}>
               CONTACT
             </div>
           </div>
@@ -51,7 +62,7 @@ function Navbar() {
           </div>
         </div>
         <div className="responsive-links-container">
-          <button className="burger-menu" onClick={()=> dispatch(showResNav())}>
+          <button className={navLight ? "burger-menu light" : "burger-menu"} onClick={()=> dispatch(showResNav())}>
             <i className="fas fa-bars"></i>
           </button>
           <ResponsiveNav />
