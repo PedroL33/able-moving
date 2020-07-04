@@ -1,0 +1,104 @@
+.container {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.title {
+  padding: 100px 0 25px 0 ;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.summary {
+  font-size: 24px;
+  color: grey;
+  margin-bottom: 100px;
+}
+
+.serviceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.serviceItem {
+  width: 400px;
+  height: 400px;
+  background: rgb(250, 250, 250);
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+} 
+
+.serviceBody {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote, .priceButton {
+  padding: 10px 30px;
+  border: 1px solid green;
+  border-radius: 30px;
+  color: green;
+  background: white;
+  font-size: 20px;
+}
+
+.quote {
+  position: absolute;
+  transition: opacity 300ms ease-in;
+  opacity: 0;
+}
+
+.quote:hover, .priceButton:hover {
+  color: white;
+  background: rgba(1, 97, 9, 0.6);
+  border: 1px solid white;
+}
+
+.serviceItem:hover .quote {
+  opacity: 1;
+}
+
+.serviceItem:hover {
+  background: rgb(248, 248, 248);
+  cursor: pointer;
+}
+
+.serviceDesc {
+  font-size: 18px;
+  font-style: italic;
+  transition: opacity 300ms ease-in ;
+  opacity: 1;
+}
+
+.serviceItem:hover .serviceDesc {
+  opacity: 0;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin: 30px 0 0 0;
+}
+
+.serviceTitle {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: rgb(93, 93, 93);
+}
+
+.priceContainer {
+  margin: 50px auto;
+}
+
+.priceButton {
+  font-size: 24px;
+}

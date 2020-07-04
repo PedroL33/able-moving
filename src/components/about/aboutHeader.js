@@ -6,7 +6,7 @@ function AboutHeader() {
 
   return (
     <Fade>
-      <div className={styles.container} style={{backgroundImage: `url(${window.location.origin}/images/aboutHeader.JPG)`}}>
+      <div className={styles.container} style={{backgroundImage: `url(${window.location.origin}/images/about/aboutHeader.JPG)`}}>
         <div className={styles.overlay}>
           <div className={styles.title}>FRIENDLY AND PROFESSIONAL MOVING SERVICES</div>
           <div className={styles.text}>Family Owned and Operated.</div>
