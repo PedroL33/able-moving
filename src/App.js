@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import About from './components/about/about';
 import Contact from './components/contact';
 import Services from './components/services';
+import Footer from './components/footer';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       nav==="contact" ? <Contact />:
       <Services />
       }
+      <Footer />
     </div>
   );
 }
