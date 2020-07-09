@@ -32,6 +32,11 @@ function Navbar() {
     }
   }
 
+  function handleClick(section) {
+    window.scrollTo(0, 0)
+    dispatch(setNav(section))
+  }
+
   return (
     <div className={navLight ? "navbar-container light" : "navbar-container"}>
       <div className="site-navbar">
@@ -41,17 +46,17 @@ function Navbar() {
         </div>
         <div className={navLight ? "links-container light" : "links-container"}>
           <div className="navbar-link-container">
-            <div className={nav==="about" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("about"))}>
+            <div className={nav==="about" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("about")}>
               ABOUT
             </div>
           </div>
           <div className="navbar-link-container">
-            <div className={nav==="services" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("services"))}>
+            <div className={nav==="services" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("services")}>
               SERVICES
             </div>
           </div>
           <div className="navbar-link-container">
-            <div className={nav==="contact" ? "navbar-link active" : "navbar-link"} onClick={()=>dispatch(setNav("contact"))}>
+            <div className={nav==="contact" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("contact")}>
               CONTACT
             </div>
           </div>

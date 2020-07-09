@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: 33px;
+}
+
+.link {
+  padding: 5px;
+  border: none;
+  background: white;
+  color: grey;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.link.active {
+  color: black;
+  text-decoration: underline;
+}
+
+.linksContainer, .contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.linksContainer {
+  height: 75%;
+}
+
+.contactContainer {
+  height: 25%;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
+import AboutHeader from './serviceHeader';
 
 function Services() {
   return (
     <div>
-      Services
+      <AboutHeader />
     </div>
   )
 }

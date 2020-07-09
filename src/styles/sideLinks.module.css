@@ -1,0 +1,52 @@
+.container {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+  font-size: 25px;
+  padding: 15px;
+  background: green;
+  margin: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.linkText {
+  font-size: 16px;
+  max-width: 0px;
+  max-height: 25px;
+  overflow: hidden;
+  transition: max-width .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.link:hover .linkText {
+  max-width: 500px;
+  max-height: 25px;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+link:hover {
+  border-radius: 30px;
+}
+
+.link:hover i {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: none;
+  }
+}

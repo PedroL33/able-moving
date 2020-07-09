@@ -10,7 +10,7 @@ function Footer() {
   const dispatch = useDispatch();
 
   function isOpen() {
-    const hour = moment().tz("America/Los_Angeles").day()
+    const hour = moment().tz("America/Los_Angeles").hour()
     const day = moment().tz("America/Los_Angeles").day()
     if(day != 7 && ((day === 6 && hour < 17 && hour > 10) || (hour < 18 && hour > 9))) {
       return "WE ARE OPEN NOW!";

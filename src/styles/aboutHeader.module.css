@@ -6,7 +6,7 @@
   position: relative;
   z-index: 1;
   background-position: center;
-  background-size: 100% auto;
+  background-size: 110% auto;
   padding-top: 100px;
 }
 
@@ -24,8 +24,8 @@
 }
 
 .title {
-  font-size: 64px;
-  width: 66%;
+  font-size: 54px;
+  width: 50%;
   font-weight: 800;
   text-align: center;
 }
@@ -42,5 +42,6 @@
   }
   .title {
     font-size: 36px;
+    width: 90%;
   }
 }
