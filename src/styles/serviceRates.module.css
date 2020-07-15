@@ -1,0 +1,81 @@
+.container {
+  margin: 100px 0;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.ratesContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.rate, .tools {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rate {
+  border-radius: 50%;
+  border: 5px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to bottom, green, rgb(114, 206, 114));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+  transition: width .2s ease-in-out, height .2s ease-in-out, color .2s ease-in-out;
+}
+
+.rate:hover {
+  width: 260px;
+  height: 260px;
+  border: 5px solid transparent;
+  background-image: linear-gradient(rgb(250, 250, 250), white), 
+                    linear-gradient(to left, green, rgb(114, 206, 114));
+  background-origin: border-box;
+  background-clip: content-box, border-box
+}
+
+.tools {
+  font-size: 18px;
+  margin: 20px;
+}
+
+.toolsDesc, .rateBody, .toolItem {
+  color: rgb(104, 104, 104);
+  font-style: italic; 
+  font-size: 20px;
+}
+
+.rateBody {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.toolsDesc {
+  padding: 10px 0;
+}
+
+.price {
+  font-size: 36px;
+  color: rgb(173, 173, 173);
+}
+
+.restrictions {
+  text-align: center;
+  color: red;
+  font-size: 24px;
+  margin-top: 40px;
+}

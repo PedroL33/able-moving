@@ -1,0 +1,171 @@
+.title {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 100px;
+}
+
+.storageDesc {
+  width: 50%;
+  text-align: right;
+  font-size: 30px;
+  font-style: italic;
+  color: grey;
+  padding-right: 150px;
+}
+
+.ratesContainer {
+  text-align:center;
+  position: relative;
+}
+
+.rangeWrap {
+  position: absolute;
+  left: -137.5px;
+  top: 50%;
+  width: 25%;
+  margin: auto;
+  width: 250px;
+  transform: rotate(-90deg);
+}
+
+.rateSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px; 
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7; 
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 15px;
+}
+
+.rateSlider:hover {
+  opacity: 1;
+}
+
+.rateSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px; 
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.rateSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: green;
+  cursor: pointer;
+}
+
+.bubble {
+  background: green;
+  color: white;
+  padding: 3px 9px;
+  margin-bottom: -30px;
+  min-width: 90px;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 100px;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.rateDisplay {
+  position: relative;
+  width: 25%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.rateDesc {
+  font-size: 24px;
+  color: grey;
+  font-style: oblique;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  color: green;
+  font-weight: 800;
+}
+
+.dimensions {
+  font-size: 36px;
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+.autoContainer {
+  width: 50%;
+  margin: 100px auto;
+  font-size: 24px;
+  color: grey;
+  font-style: italic;
+  text-align: center;
+}
+
+.getQuoteButton {
+  margin: 50px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  color: green;
+  border: 1px solid green;
+  background: white;
+  transition: color .3s ease;
+}
+
+.getQuoteButton:hover {
+  background: green;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .storageDesc {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+  }
+  .rateDisplay {
+    width: 90%;
+  }
+  .rangeWrap {
+    transform: rotate(0deg);
+    top: 330px;
+    left: 50%;
+    margin-left: -125px;
+  }
+  .bubble {
+    transform: rotate(0deg);
+    bottom: -12.5px;
+    margin-left: -45px;
+  }
+  .autoContainer {
+    width: 90%;
+  }
+  .getQuoteButton {
+    font-size: 20px;
+  }
+}
