@@ -25,7 +25,7 @@ function Navbar() {
   }
 
   function handleScroll() {
-    if(window.pageYOffset > window.innerHeight-50) {
+    if(window.pageYOffset > window.innerHeight-50 || window.pageYOffset > 1000) {
       setNavLight(false)
     }else if(window.pageYOffset < window.innerHeight-50) {
       setNavLight(true)

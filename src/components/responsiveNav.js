@@ -47,7 +47,7 @@ function ResponsiveNav() {
           <div className={styles.contact}>
             <i className="fas fa-phone"></i> 360-455-9557
           </div>
-          <div className={styles.contact}>
+          <div className={styles.address}>
             <i className="fas fa-map-marker-alt"></i> 6436 Mullen Rd SE, Olympia, WA 98503
           </div>
         </div>
