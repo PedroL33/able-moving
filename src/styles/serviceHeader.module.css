@@ -1,14 +1,18 @@
 .getQuoteButton {
-  background: white;
-  color: green;
   padding: 10px 30px;
   border-radius: 30px;
   margin: 20px;
   cursor: pointer;
+  transition: background-color .3s linear;
+  background: rgba(1, 97, 9, 0.1);
+  color: white;
+  border: 1px solid white;
 }
 
 .getQuoteButton:hover {
-  background: rgb(230, 255, 230);
+  background: white;
+  color: green;
+  border: none;
 }
 
 .text {

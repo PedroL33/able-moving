@@ -134,7 +134,7 @@
   color: green;
   border: 1px solid green;
   background: white;
-  transition: color .3s ease;
+  transition: background-color .3s ease;
 }
 
 .getQuoteButton:hover {

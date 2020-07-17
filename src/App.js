@@ -3,7 +3,7 @@ import './App.css';
 import { useSelector } from 'react-redux';
 import Navbar from './components/navbar';
 import About from './components/about/about';
-import Contact from './components/contact';
+import Contact from './components/contact/contact';
 import Services from './components/services/services';
 import Footer from './components/footer';
 

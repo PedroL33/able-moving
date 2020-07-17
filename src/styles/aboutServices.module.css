@@ -48,17 +48,18 @@
   color: green;
   background: white;
   font-size: 20px;
+  transition: background-color .3s linear;
 }
 
 .quote {
   position: absolute;
-  transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in, background-color .3s linear;
   opacity: 0;
 }
 
 .quote:hover, .priceButton:hover {
   color: white;
-  background: rgba(1, 97, 9, 0.6);
+  background: green;
   border: 1px solid white;
 }
 
