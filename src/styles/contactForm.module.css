@@ -57,7 +57,7 @@
   margin-top: 30px;
   padding: 10px 30px;
   border-radius: 30px;
-  border: none;
+  border: 1px solid green;
   color: white;
   background: green;
   transition: background-color .3s linear;
@@ -70,8 +70,9 @@
 }
 
 .submitButton:hover:enabled {
-  color: white;
-  background: rgb(240, 240, 240);
+  color: green;
+  border: 1px solid green;
+  background: white;
 }
 
 @media screen and (max-width: 800px) { 
@@ -89,7 +90,5 @@
     text-align: center;
     margin: 50px 0;
   }
-
-
 }
 
