@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from 'react-redux';
-import { hideResNav, setNav } from '../actions';
+import { hideResNav, setNav, showQuote } from '../actions';
 import styles from '../styles/responsiveNav.module.css';
 
 function ResponsiveNav() {
@@ -16,12 +16,16 @@ function ResponsiveNav() {
     window.scrollTo(0, 0)
   }
 
+  function handleQuoteClick() {
+    dispatch(hideResNav())
+    dispatch(showQuote())
+  }
+
   return (
     <Modal
         show={show}
         onHide={() => dispatch(hideResNav())}
-        dialogClassName="modal-90w"
-        aria-labelledby="example-custom-modal-styling-title"
+        dialogClassName="resNav"
     >
       <Modal.Header closeButton>
       </Modal.Header>
@@ -36,7 +40,7 @@ function ResponsiveNav() {
           <button className={nav==="contact" ? `${styles.link} ${styles.active}`: styles.link} onClick={()=>handleClick("contact")}>
             CONTACT
           </button>
-          <button className={styles.link} onClick={()=>{dispatch(hideResNav())}}>
+          <button className={styles.link} onClick={()=>handleQuoteClick()}>
             FREE QUOTE
           </button>
         </div>

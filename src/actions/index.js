@@ -16,3 +16,27 @@ export const setNav = (section) => {
     payload: section
   }
 }
+
+export const showQuote = () => {
+  return {
+    type: "SHOW_QUOTE"
+  }
+}
+
+export const hideQuote = () => {
+  return {
+    type: "HIDE_QUOTE"
+  }
+}
+
+export const setSticky = () => {
+  return {
+    type: "SET_STICKY"
+  }
+}
+
+export const removeSticky = () => {
+  return {
+    type: "REMOVE_STICKY"
+  }
+}

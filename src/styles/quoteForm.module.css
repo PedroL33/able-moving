@@ -1,0 +1,108 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formItem {
+  margin: auto;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.packingInp {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.packingInp div:last-child {
+  border-right: none;
+}
+
+.packingItem {
+  padding: 15px 0;
+  background: green;
+  color: white;
+  font-size: 24px;
+  border-right: 1px solid rgba(228, 228, 228, 0.9);
+  transition: background-color .2s linear;
+  border-radius: 5px;
+  width: 33%;
+  text-align: center;
+}
+
+.packingItem.active {
+  color: green;
+  background: white;
+}
+
+.packingItem:hover {
+  background: rgba(228, 228, 228, 0.9);
+  color: green;
+  cursor: pointer;
+}
+
+.formLabel {
+  font-size: 24px;
+}
+
+.textInp, .dateInp, .sizeInp {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.textInp.invalid {
+  background:red;
+}
+
+.submitButton {
+  padding: 10px 30px;
+  font-size: 30px;
+  border: none;
+  color: white;
+  background: green;
+  border-radius: 5px;
+}
+
+.submitButton:disabled {
+  background: rgb(187, 187, 187);
+  color: grey;
+}
+
+.submitContainer {
+  margin: auto;
+}
+
+.distance {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.estimateDisplay {
+  font-size: 30px;
+  padding: 25px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.estimate {
+  width: 100%;
+  background: green;
+}
+
+@media screen and (max-width: 930px) { 
+  .formItem {
+    width: 100%;
+  }
+
+  .packingItem {
+    padding: 21px 7px;
+    font-size: 18px;
+  }
+}

@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import ResponsiveNav from './responsiveNav';
 import { useDispatch, useSelector } from 'react-redux';
-import { showResNav, hideResNav, setNav } from '../actions';
+import { showResNav, hideResNav, setNav, showQuote } from '../actions';
+import QuoteModal from './quoteModal/quoteModal';
+import styles from '../styles/navbar.module.css';
 
 function Navbar() {
 
   const dispatch = useDispatch();
   const nav = useSelector(state => state.nav);
-  const [navLight, setNavLight] = useState(true)
+  const quote = useSelector(state => state.showQuote);
+  const [navLight, setNavLight] = useState(true);
+  const sticky = useSelector(state => state.sticky);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
@@ -38,36 +42,37 @@ function Navbar() {
   }
 
   return (
-    <div className={navLight ? "navbar-container light" : "navbar-container"}>
-      <div className="site-navbar">
-        <div className="site-logo">
-          <div className="navbar-logo-top">Able</div>
-          <div className="navbar-logo-bottom">Moving Inc.</div>
+    <div className={sticky ? `${styles.navbarContainer} ${styles.sticky} ${styles.light}` : navLight ? `${styles.navbarContainer} ${styles.light}` : `${styles.navbarContainer}`}>
+      <div className={navLight ? `${styles.navbar} ${styles.light}`: `${styles.navbar}`}>
+        <div className={styles.logo}>
+          <div className={styles.logoTop}>Able</div>
+          <div className={styles.logoBottom}>Moving Inc.</div>
         </div>
-        <div className={navLight ? "links-container light" : "links-container"}>
-          <div className="navbar-link-container">
-            <div className={nav==="about" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("about")}>
+        <div className={navLight ? `${styles.links} ${styles.light}` : `${styles.links}`}>
+          <div className={styles.linkContainer}>
+            <div className={nav==="about" && !quote ? `${styles.link} ${styles.active}` : `${styles.link}`} onClick={()=>handleClick("about")}>
               ABOUT
             </div>
           </div>
-          <div className="navbar-link-container">
-            <div className={nav==="services" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("services")}>
+          <div className={styles.linkContainer}>
+            <div className={nav==="services" && !quote ? `${styles.link} ${styles.active}` : `${styles.link}`} onClick={()=>handleClick("services")}>
               SERVICES
             </div>
           </div>
-          <div className="navbar-link-container">
-            <div className={nav==="contact" ? "navbar-link active" : "navbar-link"} onClick={()=>handleClick("contact")}>
+          <div className={styles.linkContainer}>
+            <div className={nav==="contact" && !quote ? `${styles.link} ${styles.active}` : `${styles.link}`} onClick={()=>handleClick("contact")}>
               CONTACT
             </div>
           </div>
-          <div className="navbar-link-container">
-            <div className="navbar-link">
+          <div className={styles.linkContainer}>
+            <div className={quote ? `${styles.link} ${styles.active}` : `${styles.link}`} onClick={()=>dispatch(showQuote())}>
               FREE QUOTE
             </div>
+            <QuoteModal />
           </div>
         </div>
-        <div className="responsive-links-container">
-          <button className={navLight ? "burger-menu light" : "burger-menu"} onClick={()=> dispatch(showResNav())}>
+        <div className={styles.resLinksContainer}>
+          <button className={navLight ? `${styles.burger} ${styles.light}` : `${styles.burger}`} onClick={()=> dispatch(showResNav())}>
             <i className="fas fa-bars"></i>
           </button>
           <ResponsiveNav />

@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import styles from '../../styles/aboutHeader.module.css';
+import styles from '../../styles/header.module.css';
 import SideLinks from '../sideLinks';
 
 function AboutHeader() {

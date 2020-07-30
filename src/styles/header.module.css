@@ -33,12 +33,33 @@
 .text {
   font-size: 16px;
   font-weight: 800;
+  text-align: center;
+  width: 90%;
+}
+
+.button {
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color .3s linear;
+  background: rgba(1, 97, 9, 0.1);
+  color: white;
+  border: 1px solid white;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.button:hover {
+  background: white;
+  color: green;
+  border: none;
 }
 
 @media screen and (max-width: 800px) {
   .container {
-    background-size: auto auto;
-    background-position: 15% 70%;
+    background-size: auto 100%;
+    background-position: 40% 50%;
   }
   .title {
     font-size: 36px;

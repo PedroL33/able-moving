@@ -64,7 +64,6 @@ function StorageRates() {
           <div className={styles.autoDesc}>
             *We also offer secure access auto, boat, and rv storage.  Rates are based on the size and what type of access you are requesting. 
           </div>
-          <button className={styles.getQuoteButton}>Get a quote now.</button>
         </div>
       </div>
     </Fade>

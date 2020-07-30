@@ -12,12 +12,17 @@ function Footer() {
   function isOpen() {
     const hour = moment().tz("America/Los_Angeles").hour()
     const day = moment().tz("America/Los_Angeles").day()
-    if(day != 7 && ((day === 6 && hour < 17 && hour > 10) || (hour < 18 && hour > 9))) {
+    if(day != 0 && ((day === 6 && hour < 17 && hour > 10) || (hour < 18 && hour > 9))) {
       return "WE ARE OPEN NOW!";
     }
     return day===6 ? "We are closed. We will be open again on Monday at 9AM" :
     day===5 ? "We are closed. We will be open again tomorrow at 10AM" :
     "We are closed. We will be open again tomorrow at 9AM";
+  }
+
+  function handleClick() {
+    dispatch(setNav("contact"))
+    window.scrollTo(0,0)
   }
 
   return (
@@ -27,7 +32,7 @@ function Footer() {
         <div className={styles.schedule}>
           {isOpen()}
         </div>
-        <button className={styles.button} onClick={() => dispatch(setNav("contact"))}>
+        <button className={styles.button} onClick={() => handleClick()}>
           Send us a message.
         </button>
         <div className={styles.contact}>

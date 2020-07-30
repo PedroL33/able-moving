@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/aboutHeader.module.css';
+import styles from '../../styles/header.module.css';
 import SideLinks from '../sideLinks';
 
 function ContactHeader() {
