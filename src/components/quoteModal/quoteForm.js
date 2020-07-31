@@ -16,7 +16,7 @@ function QuoteForm() {
 
   useEffect(() => {
     if(from.length === 5 && to.length === 5) {
-      fetch(`/rest/${key}/multi-info.json/${from}, ${to}/radians/`, {
+      fetch(`https://www.zipcodeapi.com/rest/${key}/multi-info.json/${from}, ${to}/radians/`, {
         method: "GET",
         headers: {
           'Content-Type': 'application/json'
